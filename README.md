@@ -10,6 +10,11 @@
 - Head Pose
 - Age and Gender
 
+## Build With
+- Angular v17.3.0
+- Face-api.js v0.22.2
+- More see [package.json](https://github.com/dyazincahya-blog/angular-face-api/blob/main/package.json)
+
 ## How to run?
 - Clone this repo
 - ```yarn install``` or ```npm install```
