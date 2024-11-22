@@ -1,0 +1,53 @@
+<div class="container">
+  <h2>
+    Face Detection and Face Recognition in the browser and nodejs with
+    tensorflow.js
+  </h2>
+  <table>
+    <tr>
+      <td>
+        <video #video autoplay muted></video>
+      </td>
+      <td>
+        <canvas #canvas></canvas>
+      </td>
+    </tr>
+  </table>
+  <table border="1" cellpadding="15">
+    <tr>
+      <td>
+        <p>SMILE</p>
+      </td>
+      <td>
+        <p>BLINK</p>
+      </td>
+      <td>
+        <p>MOUTH</p>
+      </td>
+      <td>
+        <p>HEAD POSE</p>
+      </td>
+      <td>
+        <p>AGE &amp; GENDER</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>{{ smileValue }}</p>
+      </td>
+      <td>
+        <p>{{ blinkStatus }}</p>
+      </td>
+      <td>
+        <p>{{ mouthStatus }}</p>
+      </td>
+      <td>
+        <p>{{ headPose }}</p>
+      </td>
+      <td>
+        <p>{{ ageGender }}</p>
+      </td>
+    </tr>
+  </table>
+  <button class="btn" (click)="captureFrameAsBase64()">Capture Image</button>
+</div>
