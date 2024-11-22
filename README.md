@@ -1,5 +1,5 @@
 # Angular x Face-api.js
-> This is a sample code of Face-api.js in Angular, here am using Angular 17.
+> This is a sample code of Face-api.js in Angular, here am using Angular v17.
 
 [Face-api.js](https://github.com/justadudewhohacks/face-api.js) is a JavaScript API for face detection and face recognition in the browser and [nodejs](https://github.com/nodejs/node) with [tensorflow.js](https://github.com/tensorflow/tfjs)
 
