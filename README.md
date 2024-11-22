@@ -3,7 +3,7 @@
 
 [Face-api.js](https://github.com/justadudewhohacks/face-api.js) is a JavaScript API for face detection and face recognition in the browser and [nodejs](https://github.com/nodejs/node) with [tensorflow.js](https://github.com/tensorflow/tfjs)
 
-## Features
+## Features of This Project
 - Smile Detection
 - Blink (Eyes) Detection
 - Mount Detection
