@@ -18,7 +18,7 @@
 ## How to run?
 - Clone this repo
 - ```yarn install``` or ```npm install```
-- Run this command ```ng serve``` for running this project
+- Run ```ng serve``` command for running this project
 - After that access in your browser ```http://localhost:4200/```
 
 ## Screenshot Demo
