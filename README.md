@@ -18,9 +18,19 @@
 ## How to run?
 - Clone this repo
 - ```yarn install``` or ```npm install```
-- Run ```ng serve``` command for running this project
+- Run ```yarn start``` or ```ng serve``` command for running this project
 - After that access in your browser ```http://localhost:4200/```
 
+## How to build?
+- Run ```yarn build``` or ```ng build --base-href ./ --configuration production``` command for build project
+
+## How to test build result?
+- Go to ```THE_PROJECT/dist/face-detection/browser```
+- Run ```npm install -g http-server``` for install ```http-server```
+- After that run ```npx http-server``` command for running build result file
+
+## More Info
+You can call the [startVideo()](https://github.com/dyazincahya-blog/angular-face-api/blob/main/src/app/face-api/face-api.component.ts#L40) method to start scanning the face manually. and call the [stopVideo()](https://github.com/dyazincahya-blog/angular-face-api/blob/main/src/app/face-api/face-api.component.ts#L58) method to stop scanning manually.
 ## Screenshot Demo
 ![screenshot demo](https://raw.githubusercontent.com/dyazincahya-blog/angular-face-api/refs/heads/main/screenshot-demo.png)
 
