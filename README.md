@@ -37,7 +37,7 @@ You can call the [startVideo()](https://github.com/dyazincahya-blog/angular-face
 You can see all models data [Here](https://github.com/dyazincahya-blog/angular-face-api/tree/main/src/assets/models)
 
 #### package.json
-put this after ```devDependencies``` to remove warning messages when run or build a project.
+Put this after ```devDependencies``` to remove warning messages when run or build a project.
 ```json
 "browser": {
   "fs": false,
@@ -47,7 +47,7 @@ put this after ```devDependencies``` to remove warning messages when run or buil
 ```
 
 #### angular.json
-put this on ```architect > build > options``` to remove warning messages when run or build a project.
+Put this on ```architect > build > options``` to remove warning messages when run or build a project.
 ```json
 "allowedCommonJsDependencies": [
   "fast-deep-equal",
