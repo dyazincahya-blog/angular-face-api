@@ -30,7 +30,34 @@
 - After that run ```npx http-server``` command for running build result file
 
 ## More Info
+#### Method
 You can call the [startVideo()](https://github.com/dyazincahya-blog/angular-face-api/blob/main/src/app/face-api/face-api.component.ts#L40) method to start scanning the face manually. and call the [stopVideo()](https://github.com/dyazincahya-blog/angular-face-api/blob/main/src/app/face-api/face-api.component.ts#L58) method to stop scanning manually.
+
+#### Models
+You can see all models data [Here](https://github.com/dyazincahya-blog/angular-face-api/tree/main/src/assets/models)
+
+#### package.json
+put this after ```devDependencies``` to remove warning messages when run or build a project.
+```json
+"browser": {
+  "fs": false,
+  "os": false,
+  "path": false
+}
+```
+
+#### angular.json
+put this on ```architect > build > options``` to remove warning messages when run or build a project.
+```json
+"allowedCommonJsDependencies": [
+  "fast-deep-equal",
+  "css.escape",
+  "path-intersection",
+  "selection-update",
+  "@tensorflow/tfjs-core"
+],
+```
+
 ## Screenshot Demo
 ![screenshot demo](https://raw.githubusercontent.com/dyazincahya-blog/angular-face-api/refs/heads/main/screenshot-demo.png)
 
