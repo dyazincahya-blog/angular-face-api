@@ -13,6 +13,8 @@ export class FaceApiComponent implements OnInit {
   @ViewChild('video') videoElement!: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvasElement!: ElementRef<HTMLCanvasElement>;
 
+  private videoStream: MediaStream | null = null; // Store the video stream
+
   smileValue: string = 'No face detected';
   blinkStatus: string = 'Eyes open';
   mouthStatus: string = 'Mouth closed';
@@ -39,6 +41,7 @@ export class FaceApiComponent implements OnInit {
     navigator.mediaDevices
       .getUserMedia({ video: true })
       .then((stream) => {
+        this.videoStream = stream; // Store the stream for later use
         const video = this.videoElement.nativeElement;
         video.srcObject = stream;
 
@@ -50,6 +53,18 @@ export class FaceApiComponent implements OnInit {
         };
       })
       .catch((err) => console.error('Error accessing webcam: ', err));
+  }
+
+  stopVideo() {
+    if (this.videoStream) {
+      // Stop all tracks in the stream
+      this.videoStream.getTracks().forEach((track) => track.stop());
+      this.videoStream = null;
+    }
+
+    const video = this.videoElement.nativeElement;
+    video.pause();
+    video.srcObject = null; // Clear the video source
   }
 
   async onPlay() {
