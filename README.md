@@ -61,5 +61,8 @@ Put this on ```architect > build > options``` to remove warning messages when ru
 ## Screenshot Demo
 ![screenshot demo](https://raw.githubusercontent.com/dyazincahya-blog/angular-face-api/refs/heads/main/screenshot-demo.png)
 
+## Online Demo
+[Demo by Vercel](https://angular-face-api.vercel.app)
+
 ## Author
 [Kang Cahya](https://www.kang-cahya.com)
