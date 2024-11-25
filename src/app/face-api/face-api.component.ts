@@ -1,4 +1,10 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as faceapi from 'face-api.js';
 
@@ -9,9 +15,10 @@ import * as faceapi from 'face-api.js';
   templateUrl: './face-api.component.html',
   styleUrls: ['./face-api.component.scss'],
 })
-export class FaceApiComponent implements OnInit {
+export class FaceApiComponent implements OnInit, OnDestroy {
   @ViewChild('video') videoElement!: ElementRef<HTMLVideoElement>;
-  @ViewChild('canvas') canvasElement!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('canvas')
+  canvasElement!: ElementRef<HTMLCanvasElement>;
 
   private videoStream: MediaStream | null = null; // Store the video stream
 
@@ -26,13 +33,17 @@ export class FaceApiComponent implements OnInit {
     this.startVideo();
   }
 
+  ngOnDestroy() {
+    this.stopVideo(); // Ensure the video stream is stopped when the component is destroyed
+  }
+
   async loadModels() {
     // OFFLINE MODELS
     const MODEL_URL = '/assets/models';
 
     // ONLINE MODELS >> uncomment this part if you want using online models
     // const MODEL_URL = `https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@0.22.2/weights`;
-    
+
     await Promise.all([
       faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
       faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL),
